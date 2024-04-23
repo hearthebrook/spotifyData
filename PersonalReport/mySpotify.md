@@ -124,7 +124,7 @@ ggplot(brook_recent_days, aes(x=date, y=total_hr)) +
 ```
 
 ::: {.cell-output-display}
-![](mySpotify_files/figure-html/semesters graph-1.png){width=672}
+![](mySpotify_files/figure-html/semestersGraph-1.png){width=672}
 :::
 :::
 
@@ -146,7 +146,7 @@ ggplot(brook_recent_days, aes(x=event, y=total_hr, color=event))+
 ```
 
 ::: {.cell-output-display}
-![](mySpotify_files/figure-html/semesters summary-1.png){width=672}
+![](mySpotify_files/figure-html/semestersSummary-1.png){width=672}
 :::
 :::
 
@@ -175,7 +175,7 @@ ggplot(brook_semesters, aes(x = day_of_week, y = total_hr)) +
 ```
 
 ::: {.cell-output-display}
-![](mySpotify_files/figure-html/semesters and days of the week-1.png){width=672}
+![](mySpotify_files/figure-html/semestersAndDOW-1.png){width=672}
 :::
 :::
 
@@ -275,7 +275,7 @@ labs(
 ```
 
 ::: {.cell-output-display}
-![](mySpotify_files/figure-html/class schedule-1.png){width=672}
+![](mySpotify_files/figure-html/classSchedule-1.png){width=672}
 :::
 :::
 

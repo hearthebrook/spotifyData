@@ -13,7 +13,7 @@ format:
 knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
 ```
 
-```{r loading data}
+```{r loadingData}
 library(tidyverse)
 library(jsonlite)
 
@@ -58,7 +58,7 @@ entries, I found some interesting insights!
 > "Yesterday I got the strongest confirmation from God that it's okay for me to focus for a season on my career and education...
 > These feelings led me to end things with [Daniel] (which has been sad). I mean [there were other reasons] but I felt confident [in] ending the romantic side [of the relationship] for a time"
 
-```{r semesters graph}
+```{r semestersGraph}
 # Build a visual (For Fall and Winter Semester)
 brook_recent_days <- brook_all %>%
     mutate(date = date(endTime)) %>%
@@ -120,7 +120,7 @@ Another cool trend to see from this visual is that during the break, my listenin
 Let's look closer into this.
 
 
-```{r semesters summary}
+```{r semestersSummary}
 ggplot(brook_recent_days, aes(x=event, y=total_hr, color=event))+
     geom_boxplot() +
     labs(x=NULL, y= "Hours Listened", title="Periods of time") +
@@ -136,7 +136,7 @@ Seeing that two of the outliers as seen on the first graph are tied to events in
 
 To approach this question, I looked at my listening average for each day of the week each period of time. Besides the fact that it appears I'm listening to more music over Winter semester in general, we can also see the average time matches what you'd expect based on my schedule.  
 
-```{r semesters and days of the week}
+```{r semestersAndDOW}
 
 brook_semesters <- brook_recent_days %>%
     filter(event != "Break")
@@ -179,7 +179,7 @@ The fact that I can vaguely map my schedule based on the number of hours I liste
 To answer this question, I decided to zoom in and just look at Winter semester. Because the values on msListened are tied to the endTime this made finding the average a little weird and so I decided to simply sum the number of milliseconds for each hour and group to make the graph.
 
 
-```{r class schedule}
+```{r classSchedule}
 
 brook_winter_semester <- brook_all %>%
     mutate(
